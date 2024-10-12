@@ -1,0 +1,338 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+    overflow: hidden !important;
+}
+
+.train-container {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+
+.tunnel {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 5% 5% 0 0;
+    position: absolute;
+    bottom: -13%;
+    left: -3px;
+    rotate: 269deg;
+    z-index: 4;
+}
+
+.train {
+    height: 70px;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    border-radius: 10px;
+    position: absolute;
+    bottom: -128px;
+    left: 33%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.windows {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.window {
+    width: 20px;
+    height: 30px;
+    background-color: #3b3b3b;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.wheels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+}
+
+.wheel {
+    width: 20px;
+    height: 20px;
+    background-color: #636363;
+    border-radius: 50%;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f0f4f8;
+}
+
+.engine_container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    top: 34%;
+    left: 160%;
+}
+
+.engine-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    top: -10%;
+    left: -21%;
+}
+
+.engine {
+    position: relative;
+    width: 180px;
+    height: 80px;
+    background-color: #f7d43b;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+}
+
+/* Engine top part */
+.engine-top {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 50px;
+    height: 20px;
+    background-color: #2f3b84;
+    border-radius: 10px 10px 0 0;
+}
+
+.engine-front {
+    width: 50px;
+    height: 70px;
+    background-color: #2f3b84;
+    position: absolute;
+    right: -50px;
+    top: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Windows */
+.engine-windows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.engine-window {
+    width: 20px;
+    height: 25px;
+    background-color: #3b3b3b;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+/* Wheels */
+.engine-wheels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    width: 140px;
+}
+
+.engine-wheel {
+    width: 30px;
+    height: 30px;
+    background-color: #636363;
+    border-radius: 50%;
+}
+
+.track {
+    border: 8px solid gray;
+    position: relative;
+    bottom: -101%;
+}
+
+@keyframes moveTrain {
+    100% {
+        transform: translateX(-100%);
+    }
+
+    0% {
+        transform: translateX(100%);
+    }
+}
+
+.train-move {
+    animation: moveTrain 5s linear infinite;
+}
+
+/* For screens less than 1440px */
+@media (max-width: 1440px) {
+    .train {
+        height: 55px;
+    }
+
+    .window {
+        width: 16px;
+        height: 26px;
+    }
+
+    .wheel {
+        width: 16px;
+        height: 16px;
+    }
+
+    .engine {
+        width: 150px;
+        height: 65px;
+    }
+
+    .engine-window {
+        width: 16px;
+        height: 20px;
+    }
+
+    .engine-wheel {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* For screens less than 1024px */
+@media (max-width: 1024px) {
+    .train {
+        height: 50px;
+    }
+
+    .engine-front {
+        width: 50px;
+        height: 59px;
+    }
+
+    .window {
+        width: 14px;
+        height: 24px;
+    }
+
+    .wheel {
+        width: 14px;
+        height: 14px;
+    }
+
+    .engine {
+        width: 140px;
+        height: 60px;
+    }
+
+    .engine-window {
+        width: 14px;
+        height: 18px;
+    }
+
+    .engine-wheel {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* For screens less than 768px */
+@media (max-width: 768px) {
+    .train {
+        height: 45px;
+    }
+
+    .window {
+        width: 12px;
+        height: 22px;
+    }
+
+    .wheel {
+        width: 12px;
+        height: 12px;
+    }
+
+    .engine {
+        width: 120px;
+        height: 55px;
+    }
+
+    .engine-window {
+        width: 12px;
+        height: 16px;
+    }
+
+    .engine-wheel {
+        width: 18px;
+        height: 18px;
+    }
+
+    .engine-front {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* For screens less than 375px */
+@media (max-width: 375px) {
+    .train {
+        height: 35px;
+        width: 375px;
+    }
+
+    .window {
+        width: 8px;
+        height: 18px;
+    }
+
+    .engine-front {
+        width: 50px;
+        height: 40px;
+    }
+
+    .wheel {
+        width: 8px;
+        height: 8px;
+    }
+
+    .engine {
+        width: 90px;
+        height: 45px;
+    }
+
+    .train-container {
+        width: 375px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .engine-window {
+        width: 8px;
+        height: 12px;
+    }
+
+    .engine-wheel {
+        width: 14px;
+        height: 14px;
+    }
+
+    .tunnel {
+        width: 101px;
+        height: 130px;
+    }
+}
